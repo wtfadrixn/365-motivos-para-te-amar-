@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>365 Motivos para te Amar 💘</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #ffe6f0, #fff);
+      text-align: center;
+      color: #cc3366;
+      overflow: hidden;
+    }
+
+    h1 {
+      margin-top: 50px;
+      font-size: 2.5em;
+    }
+
+    #motivo {
+      margin-top: 30px;
+      font-size: 1.6em;
+      padding: 20px;
+      background: rgba(255,255,255,0.85);
+      border-radius: 20px;
+      width: 80%;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      display: none;
+    }
+
+    button {
+      margin-top: 30px;
+      padding: 15px 40px;
+      font-size: 1.2em;
+      background-color: #ff66a3;
+      border: none;
+      border-radius: 30px;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #e0558f;
+    }
+
+    /* Coraçãozinhos */
+    .heart {
+      position: fixed;
+      width: 20px;
+      height: 20px;
+      background: url('https://cdn-icons-png.flaticon.com/512/833/833472.png') no-repeat center;
+      background-size: contain;
+      animation: fall 6s linear infinite;
+      z-index: 0;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Todos os motivos para te amar 💖</h1>
+  <button onclick="mostrarMotivo()">Clique para ver um novo motivo para eu te amar</button>
+  <div id="motivo"></div>
+
+  <!-- Música romântica (pode trocar por outra) -->
+  <audio autoplay loop>
+    <source src="iris.mp3" type="audio/mpeg">
+    Seu navegador não suporta áudio.
+  </audio>
+
+  <script>
+    const motivos = [
+      "Seu sorriso ilumina meu mundo.",
+      "Você me dá paz só com um abraço.",
+      "Até seu jeitinho bravo é lindo.",
+      "Você me inspira todos os dias.",
+      "A vida tem mais cor com você.",
+      "Seu sorriso ilumina meu mundo.",
+  "Seu abraço é meu lugar favorito.",
+  "Você me entende até no silêncio.",
+  "Com você, até os dias difíceis são mais leves.",
+  "Seu jeitinho me encanta todos os dias.",
+  "Você é meu porto seguro.",
+  "Seu cheiro me traz paz.",
+  "Você é linda por dentro e por fora.",
+  "Admiro sua força e coragem.",
+  "Você me faz querer ser alguém melhor.",
+  "Você me faz rir mesmo nos dias tristes.",
+  "Seu carinho me cura.",
+  "Você me ama do jeitinho que eu sou.",
+  "Você me apoia em tudo que eu sonho.",
+  "Você cuida de mim como ninguém.",
+  "Você me inspira todos os dias.",
+  "Você sabe exatamente o que dizer.",
+  "A forma como me olha me faz derreter.",
+  "Seus beijos têm gosto de amor.",
+  "Você é minha melhor amiga e meu amor.",
+  "Cada momento com você é mágico.",
+  "Você é a razão do meu sorriso bobo.",
+  "Seu toque é meu remédio.",
+  "Você me ensina a amar com paciência.",
+  "Você é doce, divertida e maravilhosa.",
+  "Não existe tédio ao seu lado.",
+  "Você transforma coisas simples em memórias lindas.",
+  "Você me escuta de verdade.",
+  "Seu bom humor é contagiante.",
+  "Você me faz sentir especial todos os dias.",
+  "Você me dá motivos para agradecer diariamente.",
+  "Você me faz acreditar no amor.",
+  "Com você, o tempo voa e ao mesmo tempo para.",
+  "Você é minha paz no meio do caos.",
+  "Você é meu destino preferido.",
+  "Você é a poesia da minha vida.",
+  "Você é meu lar.",
+  "Você me surpreende com gestos pequenos e significativos.",
+  "Você é meu sol até nos dias nublados.",
+  "Te amar me faz feliz sem motivo.",
+  "Você é meu milagre cotidiano.",
+  "Você é minha razão, meu riso e minha saudade.",
+  "Você tem o dom de me acalmar.",
+  "Você me faz sentir em casa só com seu sorriso.",
+"Você tem um jeitinho de cuidar que aquece o coração.",
+"Você é luz até quando tudo parece escuro.",
+"Você me dá forças quando acho que não tenho mais.",
+"Você me faz rir com suas bobeiras mais fofas.",
+"Você tem um abraço que cura qualquer tristeza.",
+"Seu toque é carinho puro.",
+"Você torna a vida mais doce.",
+"Você é minha calma no caos.",
+"Você me olha como ninguém nunca olhou.",
+"Você me escuta de verdade, até nas entrelinhas.",
+"Você é a melhor parte dos meus dias.",
+"Você é paciente com meus defeitos.",
+"Você transforma qualquer lugar em lar.",
+"Você me dá vontade de construir um futuro lindo.",
+"Você me lembra que o amor é real.",
+"Você valoriza os pequenos momentos como eu.",
+"Você tem um cheirinho que dá saudade.",
+"Você é meu refúgio favorito.",
+"Você sorri e tudo faz sentido.",
+"Você é minha canção preferida.",
+"Você faz do meu mundo um lugar melhor.",
+"Você me ama nos meus dias bons e ruins.",
+"Você é a melhor notícia da minha vida.",
+"Você é sensível de um jeito que emociona.",
+"Você tem um coração gigante.",
+"Você sempre quer meu bem, mesmo quando eu não percebo.",
+"Você é minha motivação diária.",
+"Você transforma meu cansaço em descanso.",
+"Você me completa sem precisar me mudar.",
+"Você é poesia em forma de gente.",
+"Você torna tudo mais leve com sua presença.",
+"Você tem a gargalhada mais gostosa que existe.",
+"Você é verdadeira e isso me faz confiar tanto.",
+"Você me faz acreditar que sou especial.",
+"Você é minha rotina preferida.",
+"Você sabe como me acalmar com poucas palavras.",
+"Você me respeita e isso é raro.",
+"Você é minha melhor sorte.",
+"Você me aceita até nos meus dias mais difíceis.",
+"Você é tudo o que pedi em silêncio.",
+"Você é meu acaso favorito.",
+"Você é a única pessoa que me faz querer parar o tempo.",
+"Você é minha inspiração para ser melhor.",
+"Você é a paz que eu procurava.",
+"Você é o tipo de amor que aquece a alma.",
+"Você me conquista de novo todos os dias.",
+"Você me faz querer viver mil vidas com você.",
+"Você é o motivo do meu coração bater diferente.",
+"Você é o meu sempre que vale a pena lutar.",
+"Você me faz amar até as segundas-feiras.",
+      // Continue até 365...
+    ];
+
+    function mostrarMotivo() {
+      const hoje = new Date();
+      const diaAno = Math.floor((hoje - new Date(hoje.getFullYear(), 0, 0)) / 86400000);
+      const motivoIndex = (diaAno - 1) % motivos.length;
+      const div = document.getElementById('motivo');
+      div.style.display = 'block';
+      div.textContent = motivos[motivoIndex];
+    }
+
+    // Corações flutuando 💕
+    function criarCoraçõezinhos() {
+      setInterval(() => {
+        const heart = document.createElement("div");
+        heart.className = "heart";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.animationDuration = (Math.random() * 3 + 3) + "s";
+        document.body.appendChild(heart);
+        setTimeout(() => {
+          heart.remove();
+        }, 6000);
+      }, 300);
+    }
+
+    criarCoraçõezinhos();
+  </script>
+</body>
+</html>
